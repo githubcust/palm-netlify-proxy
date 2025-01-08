@@ -38,7 +38,7 @@ export default async (request: Request, context: Context) => {
 </head>
 <body>
   <h1>Grok API proxy on Netlify Edge</h1>
-  <p>This project uses a reverse proxy to access the Grok API. -"x-goog-api-client","x-api-key"- </p>
+  <p>This project uses a reverse proxy to access the Grok API. -"x-goog-api-client","x-api-key "- </p>
 </body>
 </html>
     `
@@ -57,7 +57,7 @@ export default async (request: Request, context: Context) => {
     url.searchParams.append(key, value);
   });
 
-  const headers = pickHeaders(request.headers, ["content-type", "Authorization:Bearer", "accept-encoding"]);
+  const headers = pickHeaders(request.headers, ["content-type", "Authorization", "accept-encoding"]);
 
   const response = await fetch(url, {
     body: request.body,
