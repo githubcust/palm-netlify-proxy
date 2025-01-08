@@ -61,7 +61,7 @@ export default async (request: Request, context: Context) => {
 
   const response = await fetch(url, {
     body: request.body,
-    method: request.: request.method,,
+    method: request. request.method,
     duplex: 'half',
     headers,
   });
