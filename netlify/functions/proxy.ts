@@ -57,11 +57,11 @@ export default async (request: Request, context: Context) => {
     url.searchParams.append(key, value);
   });
 
-  const headers = pickHeaders(request.request.headers, ["content-type", "x-api-key", "accept-encoding"]);;
+  const headers = pickHeaders(request.request.headers, ["content-type", "x-api-client", "x-api-key", "accept-encoding"]);;
 
   const response = await fetch(url, {
     body: request.body,
-    method: request.method,
+    method: request.: request.method,,
     duplex: 'half',
     headers,
   });
