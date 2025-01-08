@@ -34,17 +34,11 @@ export default async (request: Request, context: Context) => {
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Google PaLM API proxy on Netlify Edge</title>
+  <title>Grok API proxy on Netlify Edge</title>
 </head>
 <body>
-  <h1 id="google-palm-api-proxy-on-netlify-edge">Google PaLM API proxy on Netlify Edge</h1>
-  <p>Tips: This project uses a reverse proxy to solve problems such as location restrictions in Google APIs. </p>
-  <p>If you have any of the following requirements, you may need the support of this project.</p>
-  <ol>
-  <li>When you see the error message &quot;User location is not supported for the API use&quot; when calling the Google PaLM API</li>
-  <li>You want to customize the Google PaLM API</li>
-  </ol>
-  <p>For technical discussions, please visit <a href="https://simonmy.com/posts/使用netlify反向代理google-palm-api.html">https://simonmy.com/posts/使用netlify反向代理google-palm-api.html</a></p>
+  <h1>Grok API proxy on Netlify Edge</h1>
+  <p>This project uses a reverse proxy to access the Grok API.</p>
 </body>
 </html>
     `
@@ -56,7 +50,7 @@ export default async (request: Request, context: Context) => {
     });
   }
 
-  const url = new URL(pathname, "https://api.groq.com/openai");
+  const url = new URL(pathname, "https://api.x.ai");
   searchParams.delete("_path");
 
   searchParams.forEach((value, key) => {
