@@ -34,11 +34,11 @@ export default async (request: Request, context: Context) => {
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Grok API proxy on Netlify Edge</title>
+  <title>Groq API proxy on Netlify Edge</title>
 </head>
 <body>
-  <h1>Grok API proxy on Netlify Edge</h1>
-  <p>This project uses a reverse proxy to access the Grok API. </p>
+  <h1>Groq API proxy on Netlify Edge</h1>
+  <p>This project uses a reverse proxy to access the Groq API. </p>
 </body>
 </html>
     `
