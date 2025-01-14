@@ -50,7 +50,7 @@ export default async (request: Request, context: Context) => {
     });;
   }
 
-  const url = new URL(pathname, "https://api.groq.com/openai");
+  const url = new URL(pathname, "https://api.groq.com/openai/v1");
   searchParams.delete("_path");
 
   searchParams.forEach((value, key) => {
